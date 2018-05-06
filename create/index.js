@@ -1,6 +1,5 @@
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/timer';
-import { map } from 'rxjs/operators/map';
 
 const customObservable = Observable.create(observer => {
   observer.next(42);
