@@ -16,4 +16,4 @@ export const fromStdIn = () => {
   return observable;
 };
 
-fromStdIn().subscribe((a) => console.log(a));
+// fromStdIn().subscribe((a) => console.log(a));
