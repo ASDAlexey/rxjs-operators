@@ -1,10 +1,10 @@
 import { range } from 'rxjs/observable/range';
-import { groupBy } from 'rxjs/operators/groupBy';
-import { mergeMap } from 'rxjs/operators/mergeMap';
+import { groupBy, mergeMap, toArray } from 'rxjs/operators';
 
+// https://www.learnrxjs.io/operators/transformation/groupby.html
 range(1, 20)
   .pipe(
     groupBy(n => n % 2 === 0),
-    mergeMap(nGroup => nGroup.toArray())
+    mergeMap(group => group.pipe(toArray()))
   )
   .subscribe((e) => console.log(e));
