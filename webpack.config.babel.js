@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import path from 'path';
 
 export default {
+  mode: 'development',
   entry: {
     fromEvent: './fromEvent/index.js'
   },
@@ -11,7 +12,7 @@ export default {
     filename: '[name]/bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.json']
+    extensions: ['.js', '.json', '.html']
   },
   module: {
     rules: [
